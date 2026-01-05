@@ -325,3 +325,6 @@ defaults:
       comments: # true
       share: true
       related: true
+header:
+  overlay_image: /assets/images/fondo.jpg
+  overlay_filter: 0.4
