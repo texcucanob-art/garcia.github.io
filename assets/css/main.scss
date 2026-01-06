@@ -139,6 +139,12 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('
   display: none !important;
 }
 
+/* Hacer el pie de página más discreto */
+.page__footer {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-top: 1px solid #33ff33 !important; /* Una línea verde delgada */
+}
+
 /* Hace que el footer sea transparente para que se vea tu imagen de fondo */
 .page__footer {
   background-color: transparent !important;
