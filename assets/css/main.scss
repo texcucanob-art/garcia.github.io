@@ -167,3 +167,15 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('
 .page__inner-wrap, .archive {
   border: none !important;
 }
+/* Eliminar el menú Quick-Start Guide y cualquier barra lateral derecha */
+.sidebar__right {
+  display: none !important;
+}
+
+/* Centrar el contenido principal para que use todo el ancho */
+.archive, .page {
+  width: 100% !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 0 !important;
+}
