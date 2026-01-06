@@ -8,7 +8,43 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 /* --- ESTÉTICA HACKER TOTAL --- */
+/* [PUNTO 1] Tu código actual de fondo, sidebar y ventana de código va aquí... */
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/fondo.jpg');
+  /* ... resto de tu código actual ... */
+}
 
+/* [PUNTO 2] AÑADE ESTO JUSTO AQUÍ DEBAJO: */
+
+/* 1. Limpieza de menús y títulos que estorban */
+.sidebar__right, .archive__subtitle {
+  display: none !important;
+}
+
+.page__inner-wrap, .archive {
+  border: none !important;
+}
+
+/* 2. Estilo Neón para el Título y la Descripción */
+.page__title {
+  color: #33ff33 !important; 
+  text-shadow: 0 0 10px rgba(51, 255, 51, 0.8) !important;
+  font-family: 'Consolas', monospace;
+  text-transform: uppercase;
+}
+
+.page__lead {
+  color: #fff !important;
+  font-family: 'Consolas', monospace;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* 3. Transparencia en la barra de navegación superior (Opcional pero recomendado) */
+.masthead {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-bottom: 1px solid #333 !important;
+}
 /* 1. Imagen de fondo fija en toda la web */
 body {
 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/fondo.jpg');
@@ -116,4 +152,18 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('
   max-width: 900px;
   margin: 0 auto;
   float: none !important;
+}
+/* Elimina el menú de navegación derecho (Quick-Start Guide) */
+.sidebar__right {
+  display: none !important;
+}
+
+/* Quita el título de "Recent Posts" o subtítulos de archivo */
+.archive__subtitle {
+  display: none !important;
+}
+
+/* Elimina las líneas horizontales decorativas del tema que ensucian el fondo */
+.page__inner-wrap, .archive {
+  border: none !important;
 }
