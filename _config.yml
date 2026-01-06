@@ -21,9 +21,8 @@ header:
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title: "Hackea tu Descanso" # El nombre que sale en la pestaña del navegador
-name: "Garcia Texcucano"    # Tu nombre
-masthead_title: "Hackea tu Descanso" # Esto fuerza el nombre en la barra superior
+title: "Hackea tu Descanso"
+masthead_title: "Hackea tu Descanso"
 description              : "Analisis de la relacion de sueño y descanso"
 header:
   overlay_image: /assets/images/fondo.jpg
