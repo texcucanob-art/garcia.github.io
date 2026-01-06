@@ -98,3 +98,22 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('
   from, to { opacity: 0; }
   50% { opacity: 1; }
 }
+/* Elimina la sección FOLLOW y el espacio extra del footer */
+.page__footer-follow {
+  display: none !important;
+}
+
+/* Hace que el footer sea transparente para que se vea tu imagen de fondo */
+.page__footer {
+  background-color: transparent !important;
+  border-top: none !important;
+  color: #33ff33 !important; /* Texto verde hacker para el copyright */
+}
+
+/* Centra el contenido principal ahora que quitamos los estorbos */
+.page__content {
+  width: 100% !important;
+  max-width: 900px;
+  margin: 0 auto;
+  float: none !important;
+}
