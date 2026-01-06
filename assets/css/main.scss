@@ -18,6 +18,17 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('
   background-position: center;
   font-family: 'Consolas', 'Monaco', monospace;
 }
+/* Ocultar la barra lateral del autor para ganar espacio */
+.sidebar {
+  display: none !important;
+}
+
+/* Centrar el contenido para que no quede un hueco a la izquierda */
+.archive, .page {
+  width: 100% !important;
+  max-width: 1000px; /* Puedes ajustar este ancho a tu gusto */
+  margin: 0 auto;
+}
 
 /* 2. Contenedor estilo Ventana de Código */
 .code-window {
