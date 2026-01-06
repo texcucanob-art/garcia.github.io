@@ -15,8 +15,8 @@
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 # Configuración del encabezado y fondo principal
 header:
-  overlay_image: /assets/images/fondo.jpg
-  overlay_filter: 0.85 # Filtro oscuro para que resalte el texto verde
+  overlay_image: assets/images/fondo.jpg
+  overlay_filter: 0.85
 
 # Site Settings
 locale                   : "en-US"
