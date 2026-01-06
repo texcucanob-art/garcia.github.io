@@ -19,14 +19,17 @@ header:
   overlay_filter: 0.85
 
 # Site Settings
-locale                   : "en-US"
-rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
+locale: "es-MX" # Cambiado a español
 title: "Hackea tu Descanso"
 masthead_title: "Hackea tu Descanso"
-description              : "Analisis de la relacion de sueño y descanso"
+description: "Análisis de la relación de sueño y descanso"
+name: "Garcia Texcucano"
+
+# Configuración del encabezado principal
 header:
-  overlay_image: /assets/images/fondo.jpg
-  overlay_filter: 0.2
+  overlay_image: assets/images/fondo.jpg
+  overlay_filter: 0.5 # Bajado un poco para que se vea mejor la imagen
+  caption: "Mejora un 1% cada día" # Aquí puedes poner tu lema
 
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
