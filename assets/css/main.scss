@@ -185,3 +185,22 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('
   margin: 0 auto;
   padding-right: 0 !important;
 }
+/* ELIMINACIÓN TOTAL DE BARRA LATERAL DERECHA */
+aside.sidebar__right, 
+.sidebar__right, 
+#googlesearch, 
+.greedy-nav__toggle {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+}
+
+/* FORZAR QUE EL CONTENIDO OCUPE TODO EL ANCHO DISPONIBLE */
+.page__inner-wrap {
+  width: 100% !important;
+  padding-right: 0 !important;
+}
+
+#main {
+  display: block !important;
+}
