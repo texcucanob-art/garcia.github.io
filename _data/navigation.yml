@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "inicio"
+  - title: "variable"
     url: /variable/
-  - title: "inicio"
+  - title: "resultado"
     url: /resultados/  
-  - title: "inicio"
+  - title: "resultados finales"
     url: /resultados finales/
-  - title: "inicio"
+  - title: "encuesta"
     url: /encuesta/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
