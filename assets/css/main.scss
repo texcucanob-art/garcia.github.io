@@ -204,3 +204,17 @@ aside.sidebar__right,
 #main {
   display: block !important;
 }
+---
+.menu {
+  background-color: #0b0f14;
+}
+
+.menu a {
+  color: #00ff88;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #66ffbb;
+}
