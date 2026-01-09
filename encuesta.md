@@ -1,6 +1,6 @@
 .---
 layout: single
-title: "Encuesta"
+title: "encuesta"
 permalink: /encuesta/
 ---
 l
