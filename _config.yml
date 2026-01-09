@@ -24,6 +24,9 @@ title: "Hackea tu Descanso"
 masthead_title: "Hackea tu Descanso"
 description: "Análisis de la relación de sueño y descanso"
 name: "Garcia Texcucano"
+url: "https://texcucanob-art.github.io"
+baseurl: "/garcia.github.io"
+repository: texcucanob-art/garcia.github.io
 
 # Configuración del encabezado principal
 header:
