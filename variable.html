@@ -11,59 +11,102 @@ title: Variable
         <p>> Datos de variable cargados con éxito...</p>
     </div>
 </div>
-**resumen de las variables**
+#resumen de las variables#
 Este estudio de la UPIIT analiza cómo el estrés y la tecnología arruinan el descanso en jovenes.
 Revela que la mayoria sufre ansiedad y agotamiento por el exceso de pantallas y falta de hidratacion.
 En lugar de soluciones drasticas, propone una optimizacion basada en el metodo Kaizen.
 Propone usar tecnología para crear microhabitos como beber agua o convivir con mascotas logrando
 reducir el estres y mejorar la salud de forma natural
 <style>
-  .grid-evidencias {
+  .galeria-scroll {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 30px;
-    padding-bottom: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
   }
-  .item-foto {
+  .targeta-img {
     background: #1a1a1a;
-    border: 1px solid #333;
-    padding: 8px;
-    border-radius: 4px;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    border-radius: 8px;
     text-align: center;
+    transition: transform 0.3s;
   }
-  .item-foto img {
+  .targeta-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff00;
+  }
+  .targeta-img img {
     width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 2px;
-    border: 1px solid #444;
+    height: 150px;
+    object-fit: contain;
+    background: #000;
+    cursor: pointer;
   }
-  .item-foto span {
+  .img-label {
     display: block;
-    font-family: monospace;
-    font-size: 10px;
-    color: #00ff00; /* Verde terminal */
-    margin-top: 5px;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    font-size: 12px;
   }
 </style>
 
-<div class="grid-evidencias">
-  <div class="item-foto">
-    <img src="../assets/images/foto1.jpg" alt="Evidencia 1">
-    <span>IMG_01.SYS</span>
+<div class="galeria-scroll">
+  <div class="targeta-img">
+    <a href="../edad.png" target="_blank">
+      <img src="../edad.png" alt="Edad">
+    </a>
+    <span class="img-label">EDAD.SYS</span>
   </div>
-  <div class="item-foto">
-    <img src="../assets/images/foto2.jpg" alt="Evidencia 2">
-    <span>IMG_02.SYS</span>
+
+  <div class="targeta-img">
+    <a href="../genero.png" target="_blank">
+      <img src="../genero.png" alt="Genero">
+    </a>
+    <span class="img-label">GENERO.SYS</span>
   </div>
-  <div class="item-foto">
-    <img src="../assets/images/foto3.jpg" alt="Evidencia 3">
-    <span>IMG_03.SYS</span>
+
+  <div class="targeta-img">
+    <a href="../hijos.png" target="_blank">
+      <img src="../hijos.png" alt="Hijos">
+    </a>
+    <span class="img-label">HIJOS.SYS</span>
   </div>
-  
-  <div class="item-foto">
-    <img src="../assets/images/foto28.jpg" alt="Evidencia 28">
-    <span>IMG_28.SYS</span>
+
+  <div class="targeta-img">
+    <a href="../dieta.png" target="_blank">
+      <img src="../dieta.png" alt="Dieta">
+    </a>
+    <span class="img-label">DIETA.SYS</span>
   </div>
+
+  <div class="targeta-img">
+    <a href="../trabajo.png" target="_blank">
+      <img src="../trabajo.png" alt="Trabajo">
+    </a>
+    <span class="img-label">TRABAJO.SYS</span>
+  </div>
+
+  <div class="targeta-img">
+    <a href="../vivienda.png" target="_blank">
+      <img src="../vivienda.png" alt="Vivienda">
+    </a>
+    <span class="img-label">VIVIENDA.SYS</span>
+  </div>
+
+  <div class="targeta-img">
+    <a href="../pantallas al dia.png" target="_blank">
+      <img src="../pantallas al dia.png" alt="Pantallas al dia">
+    </a>
+    <span class="img-label">PANTALLAS_DIA.SYS</span>
+  </div>
+
+  <div class="targeta-img">
+    <a href="../consumo de estimulantes.png" target="_blank">
+      <img src="../consumo de estimulantes.png" alt="Consumo estimulantes">
+    </a>
+    <span class="img-label">ESTIMULANTES.SYS</span>
+  </div>
+
 </div>
