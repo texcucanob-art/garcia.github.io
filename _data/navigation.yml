@@ -2,11 +2,11 @@
 main:
   - title: "inicio"
     url: /variable/
-   - title: "inicio"
+  - title: "inicio"
     url: /resultados/  
-   - title: "inicio"
+  - title: "inicio"
     url: /resultados finales/
-      - title: "inicio"
+  - title: "inicio"
     url: /encuesta/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
