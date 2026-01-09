@@ -39,7 +39,19 @@ body {
   letter-spacing: 2px;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
+.menu {
+  background-color: #0b0f14;
+}
 
+.menu a {
+  color: #00ff88;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #66ffbb;
+}
 /* 3. Transparencia en la barra de navegación superior (Opcional pero recomendado) */
 .masthead {
   background-color: rgba(0, 0, 0, 0.5) !important;
@@ -203,17 +215,4 @@ aside.sidebar__right,
 
 #main {
   display: block !important;
-}
-.menu {
-  background-color: #0b0f14;
-}
-
-.menu a {
-  color: #00ff88;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menu a:hover {
-  color: #66ffbb;
 }
