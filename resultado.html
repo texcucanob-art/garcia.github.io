@@ -16,97 +16,349 @@ Resumen Detallado de Variables Analizadas
 
 <style>
   .contenedor-analisis {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 15px;
-    margin-top: 25px;
+    margin-top: 30px;
   }
-  .bloque-info {
-    background: #0d0d0d;
-    border-left: 4px solid #00ff00;
-    padding: 15px;
-    border-radius: 0 5px 5px 0;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  .bloque-variable {
+    display: flex;
+    align-items: center;
+    background: #0a0a0a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
   }
-  .bloque-info strong {
+  .bloque-variable:hover {
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+  }
+  .info-texto {
+    flex: 1;
+    padding: 12px;
+    line-height: 1.4;
+  }
+  .info-texto strong {
     color: #00ff00;
     font-family: monospace;
+    display: block;
+    margin-bottom: 3px;
     font-size: 1.1em;
-    display: inline-block;
-    margin-bottom: 5px;
   }
-  .bloque-info p {
+  .info-texto p {
     margin: 0;
-    font-size: 0.95em;
-    color: #e0e0e0;
-    line-height: 1.5;
+    font-size: 0.85em;
+    color: #ccc;
   }
-  .id-num {
-    color: #555;
-    font-weight: bold;
-    margin-right: 8px;
+  .miniatura-contenedor {
+    width: 100px;
+    height: 80px;
+    background: #111;
+    border-left: 1px solid #333;
+    flex-shrink: 0;
+    overflow: hidden;
   }
+  .miniatura-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7);
+    transition: 0.3s;
+  }
+  .miniatura-contenedor img:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+  }
+  .id-num { color: #555; font-size: 0.9em; margin-right: 5px; }
 </style>
 
 <div class="contenedor-analisis">
-  <div class="bloque-info"><p><span class="id-num">01.</span><strong>Edad:</strong> Concentración marcada en edades de 19 y 20 años; la mayoría pertenece a un entorno joven, posiblemente universitario, con pocos valores extremos.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">02.</span><strong>Género:</strong> Predominio masculino claro, con presencia relevante de mujeres y un porcentaje menor de identidades no binarias.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">03.</span><strong>Pareja:</strong> Distribución casi equilibrada, con ligera mayoría de personas con pareja.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">04.</span><strong>Frecuencia de ubicación:</strong> Alta exposición a zonas con transporte y carreteras, indicando entornos urbanos ruidosos y de alto flujo.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">05.</span><strong>Hijos:</strong> La mayoría no tiene hijos; las familias numerosas son poco frecuentes.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">06.</span><strong>Despertar nocturno:</strong> Los despertares se concentran en la segunda mitad de la noche, principalmente después de las 2 am.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">07.</span><strong>Hora de dormir:</strong> Predomina un patrón tardío, especialmente entre las 11 pm y la 1 am.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">08.</span><strong>Dieta:</strong> La mayoría no sigue una dieta estructurada; predomina la alimentación práctica y casera.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">09.</span><strong>Horario de comida:</strong> Predominan los tiempos tradicionales, pero existe una proporción relevante con hábitos irregulares.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">10.</span><strong>Consumo de alcohol:</strong> El consumo es principalmente social y moderado; una parte significativa no consume.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">11.</span><strong>Consumo de estimulantes:</strong> El café domina ampliamente como principal estimulante.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">12.</span><strong>Horario de estimulantes:</strong> El consumo se distribuye durante todo el día, incluyendo tarde y noche.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">13.</span><strong>Horario de despertar:</strong> La mayoría se despierta entre 7 y 8 am, sugiriendo obligaciones matutinas.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">14.</span><strong>Nivel de energía al despertar:</strong> Aunque predomina el descanso, un tercio inicia el día cansado.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">15.</span><strong>Ánimo al despertar:</strong> El estado emocional predominante es neutral, con ligera inclinación al desánimo.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">16.</span><strong>Vivienda:</strong> La vivienda propia y rentada están equilibradas; vivir compartido es común.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">17.</span><strong>Deporte:</strong> Los deportes de equipo son más frecuentes; existe un grupo sedentario importante.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">18.</span><strong>Tiempo de ejercicio:</strong> Patrón polarizado entre sesiones cortas y sesiones medias.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">19.</span><strong>Frecuencia de ejercicio:</strong> La mayoría realiza ejercicio de 1 a 3 veces por semana; una parte lo hace de forma esporádica.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">20.</span><strong>Tiempo de pantalla diario:</strong> Más del 70% presenta una exposición alta a pantallas.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">21.</span><strong>Salud mental:</strong> Prevalencia extremadamente alta de estrés, ansiedad y depresión.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">22.</span><strong>Pantallas antes de dormir:</strong> Uso casi universal; más de un tercio lo hace por tiempos prolongados.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">23.</span><strong>Lectura y horario:</strong> Alta prevalencia del hábito lector, principalmente en la tarde.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">24.</span><strong>Trabajo:</strong> Alta proporción sin empleo; predominan trabajos de oficina y servicio.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">25.</span><strong>Agua:</strong> El consumo es mayormente moderado; una parte alcanza niveles adecuados.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">26.</span><strong>Problemas de salud:</strong> La mayoría no reporta enfermedades; gastritis y anemia son las más comunes.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">27.</span><strong>Medicamentos:</strong> Uso bajo de medicamentos; los más frecuentes están relacionados con salud mental y gastritis.</p></div>
-  
-  <div class="bloque-info"><p><span class="id-num">28.</span><strong>Mascotas:</strong> Alta presencia de mascotas, principalmente perros y gatos, con múltiples dueños por hogar.</p></div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">01.</span> Edad</strong>
+      <p>Concentración marcada en 19 y 20 años; entorno joven universitario.</p>
+    </div>
+    <a href="../assets/images/edad.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/edad.png" alt="Edad">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">02.</span> Género</strong>
+      <p>Predominio masculino claro, presencia relevante de mujeres.</p>
+    </div>
+    <a href="../assets/images/genero.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/genero.png" alt="Género">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">03.</span> Pareja</strong>
+      <p>Distribución equilibrada, ligera mayoría con relación estable.</p>
+    </div>
+    <a href="../assets/images/pareja.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/pareja.png" alt="Pareja">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">04.</span> Frecuencia de ubicación</strong>
+      <p>Alta exposición a zonas urbanas ruidosas y alto flujo de transporte.</p>
+    </div>
+    <a href="../assets/images/frecuencia%20de%20ubicacion.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/frecuencia%20de%20ubicacion.png" alt="Ubicación">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">05.</span> Hijos</strong>
+      <p>La mayoría no tiene hijos; familias numerosas poco frecuentes.</p>
+    </div>
+    <a href="../assets/images/hijos.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/hijos.png" alt="Hijos">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">06.</span> Despertar nocturno</strong>
+      <p>Interrupciones concentradas después de las 2:00 AM.</p>
+    </div>
+    <a href="../assets/images/despertar%20nocturno.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/despertar%20nocturno.png" alt="Despertar">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">07.</span> Hora de dormir</strong>
+      <p>Patrón tardío predominante entre las 11:00 PM y la 1:00 AM.</p>
+    </div>
+    <a href="../assets/images/hora%20de%20dormir.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/hora%20de%20dormir.png" alt="Dormir">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">08.</span> Dieta</strong>
+      <p>Predomina alimentación casera práctica sin estructura formal.</p>
+    </div>
+    <a href="../assets/images/dieta.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/dieta.png" alt="Dieta">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">09.</span> Horario de comida</strong>
+      <p>Tiempos tradicionales con alta incidencia de hábitos irregulares.</p>
+    </div>
+    <a href="../assets/images/horario%20de%20comida.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/horario%20de%20comida.png" alt="Comida">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">10.</span> Consumo de alcohol</strong>
+      <p>Uso principalmente social y moderado; abstinencia significativa.</p>
+    </div>
+    <a href="../assets/images/consumo%20de%20alcohol.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/consumo%20de%20alcohol.png" alt="Alcohol">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">11.</span> Consumo de estimulantes</strong>
+      <p>El café domina ampliamente como el principal estimulante.</p>
+    </div>
+    <a href="../assets/images/consumo%20de%20estimulantes.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/consumo%20de%20estimulantes.png" alt="Estimulantes">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">12.</span> Horario de estimulantes</strong>
+      <p>Distribución constante durante todo el día, tarde y noche.</p>
+    </div>
+    <a href="../assets/images/horarios%20de%20bebidas%20energeticas.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/horarios%20de%20bebidas%20energeticas.png" alt="Energéticas">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">13.</span> Horario de despertar</strong>
+      <p>Mayoría entre 7:00 y 8:00 AM por obligaciones matutinas.</p>
+    </div>
+    <a href="../assets/images/horario%20de%20despertar.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/horario%20de%20despertar.png" alt="Despertar">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">14.</span> Energía al despertar</strong>
+      <p>Un tercio de la muestra inicia su jornada con sensación de cansancio.</p>
+    </div>
+    <a href="../assets/images/energia%20al%20despertar.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/energia%20al%20despertar.png" alt="Energía">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">15.</span> Ánimo al despertar</strong>
+      <p>Estado emocional neutral con ligera tendencia al desánimo.</p>
+    </div>
+    <a href="../assets/images/animo%20al%20despertar.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/animo%20al%20despertar.png" alt="Ánimo">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">16.</span> Vivienda</strong>
+      <p>Equilibrio entre propiedad y renta; vivienda compartida común.</p>
+    </div>
+    <a href="../assets/images/vivienda.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/vivienda.png" alt="Vivienda">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">17.</span> Deporte</strong>
+      <p>Preferencia por deportes de equipo; grupo sedentario relevante.</p>
+    </div>
+    <a href="../assets/images/deporte.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/deporte.png" alt="Deporte">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">18.</span> Tiempo de ejercicio</strong>
+      <p>Sesiones polarizadas entre duraciones cortas y medias.</p>
+    </div>
+    <a href="../assets/images/tiempo%20de%20ejercicios.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/tiempo%20de%20ejercicios.png" alt="Tiempo">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">19.</span> Frecuencia de ejercicio</strong>
+      <p>Actividad física predominante de 1 a 3 veces por semana.</p>
+    </div>
+    <a href="../assets/images/frecuencia%20de%20ejercicos.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/frecuencia%20de%20ejercicos.png" alt="Frecuencia">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">20.</span> Tiempo de pantalla diario</strong>
+      <p>Más del 70% presenta exposición alta y prolongada.</p>
+    </div>
+    <a href="../assets/images/pantallas%20al%20dia.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/pantallas%20al%20dia.png" alt="Pantallas">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">21.</span> Salud mental</strong>
+      <p>Prevalencia extremadamente alta de estrés, ansiedad y depresión.</p>
+    </div>
+    <a href="../assets/images/salud%20mental.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/salud%20mental.png" alt="Salud Mental">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">22.</span> Pantallas antes de dormir</strong>
+      <p>Uso casi universal; un tercio lo hace por tiempos muy prolongados.</p>
+    </div>
+    <a href="../assets/images/pantallas%20al%20dormir.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/pantallas%20al%20dormir.png" alt="Pantallas dormir">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">23.</span> Lectura y horario</strong>
+      <p>Hábito lector presente, concentrado principalmente en la tarde.</p>
+    </div>
+    <a href="../assets/images/horario%20de%20lectura.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/horario%20de%20lectura.png" alt="Lectura">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">24.</span> Trabajo</strong>
+      <p>Alta tasa de desempleo; empleados en servicios u oficina.</p>
+    </div>
+    <a href="../assets/images/trabajo.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/trabajo.png" alt="Trabajo">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">25.</span> Agua</strong>
+      <p>Consumo mayormente moderado; pocos alcanzan niveles óptimos.</p>
+    </div>
+    <a href="../assets/images/agua.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/agua.png" alt="Agua">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">26.</span> Problemas de salud</strong>
+      <p>Mayoría sana; gastritis y anemia son las dolencias más comunes.</p>
+    </div>
+    <a href="../assets/images/problema%20de%20salu.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/problema%20de%20salu.png" alt="Salud">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">27.</span> Medicamentos</strong>
+      <p>Bajo uso; vinculados a salud mental y problemas digestivos.</p>
+    </div>
+    <a href="../assets/images/evidencia1.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/evidencia1.png" alt="Evidencia 1">
+    </a>
+  </div>
+
+  <div class="bloque-variable">
+    <div class="info-texto">
+      <strong><span class="id-num">28.</span> Mascotas</strong>
+      <p>Alta presencia de perros y gatos con múltiples dueños por hogar.</p>
+    </div>
+    <a href="../assets/images/evidencia2.png" target="_blank" class="miniatura-contenedor">
+      <img src="../assets/images/evidencia2.png" alt="Evidencia 2">
+    </a>
+  </div>
+
 </div>
 
 <br>
-<p style="text-align: center; margin-top: 30px;">
-  <a href="../" style="color: #00ff00; font-family: monospace; text-decoration: none;">[ >> VOLVER AL MENÚ PRINCIPAL ]</a>
+<p style="text-align: center;">
+  <a href="../" style="color: #00ff00; font-family: monospace;">[ VOLVER AL INICIO ]</a>
 </p>
