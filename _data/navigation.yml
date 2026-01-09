@@ -8,6 +8,8 @@ main:
     url: /resultados finales/
   - title: "encuesta"
     url: /encuesta/
+  - title: "recomendacion"
+    url: /recomendacion/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
