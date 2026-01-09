@@ -4,7 +4,7 @@ main:
     url: /variable/
   - title: "resultado"
     url: /resultados/  
-  - title: "resultados_finales"
+  - title: "resultados finales"
     url: /resultados finales/
   - title: "encuesta"
     url: /encuesta/
