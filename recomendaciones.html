@@ -1,9 +1,10 @@
 ---
 layout: single
-title: Recomendaciones
+title: /Recomendaciones/
 ---
+
 <h2>Apartado de recomendaciones</h2>
-<p>Este es el contenido de tu nueva página.</p>
+<p>Este es el contenido de tu nueva página basado en el modelo de intervención Kaizen.</p>
 
 <div class="code-window">
     <div class="code-content">
@@ -11,98 +12,125 @@ title: Recomendaciones
     </div>
 </div>
 
-<div class="kaizen-container">
-  <h3> Mejora Continua: Método Kaizen</h3>
-  <p>Pequeños cambios diarios para grandes resultados en tu salud.</p>
-  
-  <div class="kaizen-card" id="kaizenCard">
-    <div class="kaizen-header">
-      <span id="kaizenCategory" class="category-tag">Cargando...</span>
-    </div>
-    <h4 id="kaizenTitle">Seleccionando recomendación...</h4>
-    <p id="kaizenText"></p>
-    <button class="btn-next" onclick="generateKaizen()">Ver otro consejo</button>
-  </div>
-</div>
-
-<script>
-  const tips = [
-    {
-      categoria: "Sueño",
-      titulo: "Regla de los 5 minutos",
-      texto: "Si te cuesta dormir por estrés, dedica solo 5 minutos a escribir tus pendientes en una hoja para vaciar la mente antes de acostarte."
-    },
-    {
-      categoria: "Estrés",
-      titulo: "Micro-pausa de respiración",
-      texto: "Realiza 3 respiraciones profundas cada vez que abras un correo nuevo. Reduce el cortisol de forma inmediata."
-    },
-    {
-      categoria: "Energía",
-      titulo: "Sustitución progresiva",
-      texto: "Si consumes muchos energizantes, sustituye el último del día por un vaso de agua con limón. Un pequeño paso para tu sistema gástrico."
-    },
-    {
-      categoria: "Estilo de Vida",
-      titulo: "Kaizen en movimiento",
-      texto: "No intentes ir al gimnasio 2 horas; camina 10 minutos extra después de almorzar para mejorar la digestión y el metabolismo."
-    },
-    {
-      categoria: "Fármacos",
-      titulo: "Consulta informativa",
-      texto: "Anota los efectos secundarios que sientas y coméntalos con tu médico en la próxima cita. Estar informado es el primer paso para mejorar el tratamiento."
-    }
-  ];
-
-  function generateKaizen() {
-    const randomTip = tips[Math.floor(Math.random() * tips.length)];
-    document.getElementById("kaizenCategory").innerText = randomTip.categoria;
-    document.getElementById("kaizenTitle").innerText = randomTip.titulo;
-    document.getElementById("kaizenText").innerText = randomTip.texto;
-  }
-
-  // Cargar uno al iniciar
-  window.onload = generateKaizen;
-</script>
-
 <style>
-  .kaizen-container {
-    margin-top: 40px;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 15px;
+  .kaizen-main-container {
+    margin: 30px 0;
+    background: #121212;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+
+  /* Ocultar los botones de radio originales */
+  input[name="kaizen-control"] {
+    display: none !important;
+  }
+
+  /* Barra de navegación */
+  .kaizen-navigation {
+    display: flex;
+    background: #1f1f1f;
+    border-bottom: 2px solid #333;
+  }
+
+  .kaizen-navigation label {
+    flex: 1;
+    padding: 20px 10px;
     text-align: center;
-    color: white;
-  }
-  .kaizen-card {
-    background: #252525;
-    padding: 25px;
-    border-radius: 10px;
-    border-left: 5px solid #2ecc71;
-    margin-top: 20px;
-    min-height: 150px;
-  }
-  .category-tag {
-    background: #2ecc71;
-    color: black;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
+    cursor: pointer;
+    color: #777;
+    font-weight: 600;
+    transition: all 0.3s ease;
     text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
   }
-  .btn-next {
-    margin-top: 15px;
-    background: transparent;
+
+  .kaizen-navigation label:hover {
+    color: #2ecc71;
+    background: #252525;
+  }
+
+  /* Paneles de contenido */
+  .kaizen-panel-content {
+    display: none;
+    padding: 40px;
+    color: #e0e0e0;
+    min-height: 250px;
+    animation: fadeInEffect 0.5s ease;
+  }
+
+  .kaizen-panel-content h3 {
+    color: #2ecc71 !important;
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .kaizen-panel-content p {
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+
+  /* Lógica de activación */
+  #tab-1:checked ~ .kaizen-navigation label[for="tab-1"],
+  #tab-2:checked ~ .kaizen-navigation label[for="tab-2"],
+  #tab-3:checked ~ .kaizen-navigation label[for="tab-3"] {
+    color: #2ecc71;
+    background: #121212;
+    border-bottom: 3px solid #2ecc71;
+  }
+
+  #tab-1:checked ~ .panel-id-1,
+  #tab-2:checked ~ .panel-id-2,
+  #tab-3:checked ~ .panel-id-3 {
+    display: block;
+  }
+
+  /* Badge de estadística */
+  .stat-badge {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 15px;
+    background: rgba(46, 204, 113, 0.1);
     border: 1px solid #2ecc71;
     color: #2ecc71;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+    border-radius: 50px;
+    font-size: 0.8rem;
   }
-  .btn-next:hover {
-    background: #2ecc71;
-    color: black;
+
+  @keyframes fadeInEffect {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>
+
+<div class="kaizen-main-container">
+  <input type="radio" id="tab-1" name="kaizen-control" checked>
+  <input type="radio" id="tab-2" name="kaizen-control">
+  <input type="radio" id="tab-3" name="kaizen-control">
+
+  <nav class="kaizen-navigation">
+    <label for="tab-1">Anclas de Calma</label>
+    <label for="tab-2">Paso del 1%</label>
+    <label for="tab-3">Uso Digital</label>
+  </nav>
+
+  <div class="kaizen-panel-content panel-id-1">
+    <h3>Refugios Naturales</h3>
+    <p>Tu estudio indica que el <strong>79%</strong> de las personas ya leen y el <strong>68%</strong> aman a sus mascotas. No busques hábitos nuevos, refuerza estos como "anclas" antes de dormir para reducir ese 83% de presión de estrés detectado.</p>
+    <div class="stat-badge">Basado en: Hábitos Existentes</div>
+  </div>
+
+  <div class="kaizen-panel-content panel-id-2">
+    <h3>La Revolución del 1%</h3>
+    <p>El cansancio acumulado no se cura con un cambio radical. Aplica la micro-optimización: ajusta solo 15 minutos de tu rutina diaria. Es un cambio tan pequeño que tu cerebro no activará la resistencia al cambio (estrés).</p>
+    <div class="stat-badge">Método: Intervención Kaizen</div>
+  </div>
+
+  <div class="kaizen-panel-content panel-id-3">
+    <h3>Tecnología como Puente</h3>
+    <p>La tecnología no es el enemigo, sino cómo la usamos. El objetivo es cambiar el "ruido digital" por un uso consciente que actúe como puente hacia el equilibrio, permitiendo que tu enfoque y energía regresen gradualmente.</p>
+    <div class="stat-badge">Objetivo: Bienestar Integral</div>
+  </div>
+</div>
